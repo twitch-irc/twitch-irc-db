@@ -26,58 +26,64 @@ var locally = require('locallydb');
 var q       = require('q');
 
 module.exports = function(opt) {
-    var options = opt;
+    var options = opt || {};
+
+    // Multiple ways to accept the configuration for the database..
     try { options = opt.getOptions().options || {}; }
-    catch(err) { options = opt.options || {};}
+    catch(err) {
+        if (opt && opt.options) { options = opt.options; }
+        else { options = opt || {}; }
+    }
 
     var path = (typeof options.database != 'undefined') ? options.database : './database';
     var db   = new locally(path);
 
     return {
+        // Insert an object or an array of object to the database..
         insert: function insert(collection, elements) {
             var col = db.collection(collection);
             return q.fcall(function () {
                 return col.insert(elements);
             });
         },
+        // Retrieve elements using an object or an operator..
         where: function where(collection, query) {
             var col = db.collection(collection);
-
             return q.fcall(function () {
                 return col.where(query);
             });
         },
+        // Retrieve an element by cid..
         get: function get(collection, cid) {
             var col = db.collection(collection);
-
             return q.fcall(function () {
                 return col.get(cid) || null;
             });
         },
+        // List all elements in the collection..
         list: function list(collection) {
             var col = db.collection(collection);
-
             return q.fcall(function () {
                 return col.items;
             });
         },
+        // Update an element, it will add un-existed key and replace existed..
         update: function update(collection, cid, object) {
             var col = db.collection(collection);
-
             return q.fcall(function () {
                 return col.update(cid, object);
             });
         },
+        // Replace the element with the same cid..
         replace: function replace(collection, cid, object) {
             var col = db.collection(collection);
-
             return q.fcall(function () {
                 return col.replace(cid, object);
             });
         },
+        // Delete an item by cid..
         remove: function remove(collection, cid) {
             var col = db.collection(collection);
-
             return q.fcall(function () {
                 return col.remove(cid);
             });
