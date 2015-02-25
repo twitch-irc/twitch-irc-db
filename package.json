@@ -39,7 +39,7 @@
   ],
   "main": "./index",
   "dependencies": {
-    "locallydb": "0.0.5"
+    "locallydb": "0.0.5",
     "q": "^1.2.0"
   },
   "engines": {
