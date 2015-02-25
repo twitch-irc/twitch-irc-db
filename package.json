@@ -1,0 +1,56 @@
+{
+  "name": "twitch-irc-db",
+  "version": "1.0.0",
+  "description": "Local database module for twitch-irc.",
+  "keywords": [
+    "irc",
+    "twitch",
+    "bot",
+    "lib",
+    "library",
+    "stream",
+    "live",
+    "robot",
+    "twitchtv",
+    "twitch.tv",
+    "node",
+    "iojs",
+    "database",
+    "db",
+    "local"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twitch-irc/twitch-irc-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twitch-irc/twitch-irc-db/issues"
+  },
+  "author": {
+    "name": "Schmoopiie",
+    "email": "Schmoopiie@gmail.com",
+    "url": "http://www.schmoopiie.com/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./index",
+  "dependencies": {
+    "locallydb": "0.0.5"
+    "q": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "maintainers": [
+    {
+      "name": "Schmoopiie",
+      "email": "Schmoopiie@gmail.com"
+    }
+  ],
+  "directories": {},
+  "homepage": "https://github.com/twitch-irc/twitch-irc-db"
+}
