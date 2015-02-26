@@ -15,6 +15,8 @@ $ npm install --save twitch-irc-db
 You can either pass the client instance as a parameter or an object, as long as it contains the ``database`` object, which is the path to your local database. Not using any parameter will results as the default path, which is ``./database``.
 
 ```javascript
+var irc = require('twitch-irc');
+
 var clientOptions = {
     options: {
         exitOnError: false,
