@@ -1,10 +1,7 @@
 # twitch-irc-db
 [![Npm Version](http://img.shields.io/npm/v/twitch-irc-db.svg?style=flat)](https://www.npmjs.org/package/twitch-irc-db) [![Issues](http://img.shields.io/github/issues/twitch-irc/twitch-irc-db.svg?style=flat)](https://github.com/twitch-irc/twitch-irc-db/issues)
 
-![](http://i.imgur.com/7PMEvN5.png)
-Twitch is a trademark or registered trademark of Twitch Interactive, Inc. in the U.S. and/or other countries. "Twitch-IRC" is not operated by, sponsored by, or affiliated with Twitch Interactive, Inc. in any way.
-
-## Install
+## Installation
 
 ```bash
 $ npm install --save twitch-irc-db
