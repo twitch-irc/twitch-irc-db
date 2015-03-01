@@ -7,37 +7,9 @@
 $ npm install --save twitch-irc-db
 ```
 
-## Configuration
+## Documentation
 
-You can either pass the client instance as a parameter or an object, as long as it contains the ``database`` object, which is the path to your local database. Not using any parameter will results as the default path, which is ``./database``.
-
-```javascript
-var irc = require('twitch-irc');
-
-var clientOptions = {
-    options: {
-        exitOnError: false,
-        database: './data',
-    },
-    channels: ['schmoopiie']
-};
-
-var client = new irc.client(clientOptions);
-var db     = require('twitch-irc-db')(client);
-//var db   = require('twitch-irc-db')(clientOptions);        <- Also works!
-//var db   = require('twitch-irc-db')({database: './data'}); <- Also works!
-
-db.insert('monsters', [
-    {name: "sphinx", mythology: "greek", eyes: 2, sex: "f", hobbies: ["riddles","sitting","being a wonder"]},
-    {name: "hydra", mythology: "greek", eyes: 18, sex: "m", hobbies: ["coiling","terrorizing","growing"]},
-    {name: "huldra", mythology: "norse", eyes: 2, sex: "f", hobbies: ["luring","terrorizing"]},
-    {name: "cyclops", mythology: "greek", eyes: 1, sex: "m", hobbies: ["staring","terrorizing"]},
-    {name: "fenrir", mythology: "norse", eyes: 2, sex: "m", hobbies: ["growing","god-killing"]},
-    {name: "medusa",  mythology: "greek", eyes: 2, sex: "f", hobbies: ["coiling","staring"]}
-]).then(function () {
-    console.log('Inserted data.');
-});
-```
+[Click here for the online documentation of twitch-irc-db](http://www.schmoopiie.com/docs/twitch-irc/index.php/Modules/Database/Configuration).
 
 ## Contributing Guidelines
 
