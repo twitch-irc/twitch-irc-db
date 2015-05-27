@@ -9,7 +9,7 @@ $ npm install --save twitch-irc-db
 
 ## Documentation
 
-[Click here for the online documentation of twitch-irc-db](http://www.schmoopiie.com/docs/twitch-irc/index.php/Modules/Database/Configuration).
+[Click here for the online documentation of twitch-irc-db](http://www.twitch-irc.com/docs/twitch-irc/index.php/Modules/Database/Configuration).
 
 ## Contributing Guidelines
 
